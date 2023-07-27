@@ -7,3 +7,5 @@ usually if some one asks you this question they will give you the question like 
 q: create or construct a program implementing euclidean algorithm in which the inputs are a and p where p is prime and a!=kp and the output is a^(-1) mod p
 ### Definition 
 integer b is the inverse of integer a mod p where a.b = 1 mod p 
+### Procedure 
+the function `inverseModulo` will get two numbers namely a and p and it will calculate the inverse of a mod p using the function extended euclidean algorithm
