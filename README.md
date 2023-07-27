@@ -8,4 +8,4 @@ q: create or construct a program implementing euclidean algorithm in which the i
 ### Definition 
 integer b is the inverse of integer a mod p where a.b = 1 mod p 
 ### Procedure 
-the function `inverseModulo` will get two numbers namely a and p and it will calculate the inverse of a mod p using the function extended euclidean algorithm
+the function `inverseModulo` will get two numbers namely a and p and it will calculate the inverse of a mod p using the function `extended_gcd`
