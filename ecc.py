@@ -21,4 +21,14 @@ class Ecc:
             ti1, t = t, ti1 - quotient * t
 
         return ri1, si1, ti1
+    
+    def binaryExponention(self, a, b, p):       
+        result = 1
+        a = a % p
+        while b > 0:
+            if b & 1:
+                result = (result * a) % p
+            b = b >> 1
+            a = (a * a) % p
+        return result
 
