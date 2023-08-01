@@ -27,4 +27,4 @@ and finally we add infinity as a point on the curve(dont worry addition of infin
 In order to determine all the possible curves mod p where p is prime number we need to check `4*a^3 + 27* b^2 ≠ 0 mod p` condition where we consider our elliptic curve to be in the form of `y^2 = x^3+ax+b` and we will determing their orders using the method we provided for counting the numbers on the curve
 
 ### Procedure
-we loop through all the possible variables for a and b modulo p and we will check the condition one by one.  
+we loop through all the possible variables for a and b modulo p and we will check the condition one by one. in order to see all the possible curves and those combinations that are not forming elliptic curves just run the `deter_possible_curves`. the default value is set to 23 for p. 

@@ -47,3 +47,18 @@ class Ecc:
                 nop = nop+2
         print("number of points on the curve is: {}".format(nop))
         return nop
+    
+
+    def deter_possible_curves(self, p=23):
+        for a in range(p):
+            for b in range(p):
+                # checking the validity of the combination
+                if ((4*pow(a, 3) + 27*pow(b, 2)) % p != 0):
+                    """calculate the order"""
+                    """print the curve formula and its order"""
+                    print("curve E: y^2 = x^3 + {}x + {} mod {}".format(a, b, p))
+                    self.count_curve_points(a, b, p)
+                    print("\n")
+                else:
+                    print(
+                        "{} and {} are not suitable to make an elliptic curve".format(a, b))
