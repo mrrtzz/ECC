@@ -22,7 +22,7 @@ class Ecc:
 
         return ri1, si1, ti1
     
-    def binaryExponention(self, a, b, p):       
+    def binaryExponention(self, a:int,b:int, p:int):       
         result = 1
         a = a % p
         while b > 0:
@@ -31,4 +31,19 @@ class Ecc:
             b = b >> 1
             a = (a * a) % p
         return result
-
+    
+    def comp_vurve_modp(self, x, a, b, p):
+        t = pow(x, 3) + a*x + b
+        s = t % p
+        if (pow(s, int((p-1)/2), p) == 1):
+            return True
+        else:
+            return False
+        
+    def count_curve_points(self, a, b, p):
+        nop = 1
+        for x in range(p):
+            if (self.comp_vurve_modp(x, a, b, p)):
+                nop = nop+2
+        print("number of points on the curve is: {}".format(nop))
+        return nop

@@ -21,4 +21,4 @@ We will consider `E: Y^2 = x^3 + ax +b mod p` as our elliptic curve and the aim 
 since p is prime we compute equation for all the possible x mod p
 then we check the answer of each equation to see if they have square root mod p 
 if they have we add two points in our counter ( x,-y) (x,y)
-and finally we add infinity as a point on the curve(dont worry addition of infinity to our set of points is very useful and meaningful)
+and finally we add infinity as a point on the curve(dont worry addition of infinity to our set of points is very useful and meaningful). to run the code execute count_curve_points with a,b,p variables and you will get an answer. however for large p's this may not be an efficient way
