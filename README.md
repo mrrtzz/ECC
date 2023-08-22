@@ -28,3 +28,7 @@ In order to determine all the possible curves mod p where p is prime number we n
 
 ### Procedure
 we loop through all the possible variables for a and b modulo p and we will check the condition one by one. in order to see all the possible curves and those combinations that are not forming elliptic curves just run the `deter_possible_curves`. the default value is set to 23 for p. 
+
+## Representing a message as a point on the curve
+for some purposes we need to represent message as point on the curve, and for simplicity we consider the most basic form of this representation which we get integer `m` as our message and we will represent this as a point `(x,y)` on the curve `E` over the field `F_P`. for this purpose we can use a simple image function `x---->(x,y)`, and in order to do this first we get the message m which is an integer we calculate `m mod p` and then we calculate the value for y by sheer computation.
+
