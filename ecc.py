@@ -62,3 +62,9 @@ class Ecc:
                 else:
                     print(
                         "{} and {} are not suitable to make an elliptic curve".format(a, b))
+    
+    def image_message(self,m , a, b, p):
+        x = m % p
+        y_squared = (pow(x,3)+ a*x + b) % p
+        y = pow(y_squared, (p+1)/2, p) 
+        return (x,y)
